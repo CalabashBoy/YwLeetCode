@@ -76,7 +76,7 @@ public class ReverseTest {
         //solution.print(n1);
 
         ListNode listNode = solution.reverseList2(n1);
-        solution.print(listNode);
+
     }
 
     @Test
@@ -86,10 +86,10 @@ public class ReverseTest {
         n1.next = null;
 
         Solution solution = new Solution();
-        solution.print(n1);
+
 
         ListNode listNode = solution.reverseList2(n1);
-        solution.print(listNode);
+
     }
 
     @Test
@@ -104,9 +104,9 @@ public class ReverseTest {
         n2.next = null;
 
         Solution solution = new Solution();
-        solution.print(n1);
+
 
         ListNode listNode = solution.reverseList2(n1);
-        solution.print(listNode);
+
     }
 }

@@ -3,6 +3,9 @@ package list.reverse;
 
 import list.ListNode;
 
+/**
+ * 206 反转链表
+ */
 public class Solution {
     /**
      * 直接反转

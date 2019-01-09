@@ -1,5 +1,10 @@
 package list;
 
+import lombok.Data;
+import lombok.extern.java.Log;
+
+@Data
+@Log
 public class ListNode {
     public int val;
     public ListNode next;
@@ -9,11 +14,16 @@ public class ListNode {
         next = null;
     }
 
-    public void print() {
-        ListNode next = this.next.next;
-        while (next != null) {
-            next = this.next.next;
-            System.out.println(val);
+    @Override
+    public String toString(){
+        ListNode cur = this;
+        StringBuilder sb = new StringBuilder();
+        while (cur != null){
+            sb.append(cur.val);
+            sb.append(" ");
+            cur = cur.next;
         }
+
+        return sb.toString();
     }
 }
