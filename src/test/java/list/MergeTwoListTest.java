@@ -1,6 +1,6 @@
 package list;
 
-import list.mergeTwoList.MergeTwoList;
+import list.mergeTwoList21.MergeTwoList;
 import lombok.extern.java.Log;
 import org.junit.Test;
 

@@ -1,6 +1,6 @@
 package list;
 
-import list.cycle.CycleSolution;
+import list.cycle141.CycleSolution;
 
 import org.junit.Assert;
 import org.junit.Test;

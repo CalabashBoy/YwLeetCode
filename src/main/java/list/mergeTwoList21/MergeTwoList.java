@@ -1,4 +1,4 @@
-package list.mergeTwoList;
+package list.mergeTwoList21;
 
 import list.ListNode;
 

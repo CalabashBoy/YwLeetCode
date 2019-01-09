@@ -1,7 +1,7 @@
 package list;
 
 
-import list.reverse.Solution;
+import list.reverse206.Solution;
 import org.junit.Test;
 
 public class ReverseTest {
