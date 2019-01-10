@@ -18,7 +18,7 @@ public class SortListTest {
         n4.next = n5;
         n5.next = null;
 
-        ListNode listNode = SortList.insertSort(n1);
+        ListNode listNode = SortList.sortListMerge(n1);
         System.out.println(listNode.toString());
     }
 }
