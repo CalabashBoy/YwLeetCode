@@ -1,4 +1,6 @@
-package com.huawei.cp.List;
+package list.deleteAllValue;
+
+import list.ListNode;
 
 /**
  * @auther: y00349114
