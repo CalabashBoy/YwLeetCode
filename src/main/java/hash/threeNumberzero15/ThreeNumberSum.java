@@ -6,6 +6,36 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ThreeNumberSum {
+     public static List<List<Integer>> threeSum(int[] nums)
+    {
+        List<List<Integer>> all = new ArrayList<>();
+        Set set = new HashSet();
+        for (int i : nums)
+        {
+            set.add(i);
+        }
+
+        for (int i = 0; i < nums.length; i++)
+        {
+            for (int j = i + 1; j < nums.length; j++)
+            {
+                int sum = nums[i] + nums[j];
+                if (set.contains(-sum))
+                {
+                    set.remove(-sum);
+                    set.remove(nums[i]);
+                    set.remove(nums[j]);
+                    List list = new ArrayList();
+                    list.add(-sum);
+                    list.add(nums[i]);
+                    list.add(nums[j]);
+                    all.add(list);
+                }
+            }
+        }
+        return all;
+    }
+    
     public List<List<Integer>> threeSum(int[] nums) {
         int[] ints = Arrays.stream(nums).distinct().sorted().toArray();
 
