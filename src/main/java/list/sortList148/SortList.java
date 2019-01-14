@@ -19,7 +19,7 @@ public class SortList {
         while (cur != null) {
             next = cur.next;
 
-            while (prev.next != null && prev.next.getVal() < cur.getVal()) {
+            while (prev.next != null && prev.next.val < cur.val) {
                 prev = prev.next;
             }
 

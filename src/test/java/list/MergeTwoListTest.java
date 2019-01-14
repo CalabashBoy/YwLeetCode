@@ -35,6 +35,6 @@ public class MergeTwoListTest {
         MergeTwoList mergeTwoList = new MergeTwoList();
 
         ListNode listNode = mergeTwoList.mergeTwoLists(n1, k1);
-        log.info(listNode.toString());
+
     }
 }
