@@ -30,24 +30,23 @@ public class CountPrime {
 
     public static int count(int n) {
         boolean[] mark = new boolean[n];
-        mark[0] = true;
-        mark[1] = true;
-        for (int i = 2; i < n; i++) {
-            mark[i] = false;
-        }
 
         for (int i = 2; i < n; i++) {
-            if (mark[i] == true)
+            mark[i] = true;
+        }
+
+        for (int i = 2; i * i< n; i++) {
+            if (!mark[i] == true)
                 continue;
 
             for (int j = i * i; j < n; j += i) {
-                mark[j] = true;
+                mark[j] = false;
             }
         }
 
         int count = 0;
         for (int i = 2; i < n; i++) {
-            if (!mark[i])
+            if (mark[i])
                 count++;
         }
 
