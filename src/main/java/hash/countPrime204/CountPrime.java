@@ -5,15 +5,11 @@ package hash.countPrime204;
  * @version: 1.0
  * @since:
  */
-public class Solution
-{
-    public int countPrimes(int n)
-    {
+public class CountPrime {
+    public int countPrimes(int n) {
         int num = 0;
-        for (int i = 2; i < n; i++)
-        {
-            if (isPrime(i))
-            {
+        for (int i = 2; i < n; i++) {
+            if (isPrime(i)) {
                 num++;
             }
         }
@@ -21,13 +17,10 @@ public class Solution
         return num;
     }
 
-    private boolean isPrime(int n)
-    {
-        for (int i = 2; i * i <= n; i++)
-        {
+    private boolean isPrime(int n) {
+        for (int i = 2; i * i <= n; i++) {
             int i1 = n % i;
-            if (i1 == 0)
-            {
+            if (i1 == 0) {
                 return false;
             }
         }
@@ -35,9 +28,33 @@ public class Solution
         return true;
     }
 
-    public static void main(String[] args)
-    {
-        Solution solution = new Solution();
-        System.out.println(solution.countPrimes(10));
+    public static int count(int n) {
+        boolean[] mark = new boolean[n];
+        mark[0] = true;
+        mark[1] = true;
+        for (int i = 2; i < n; i++) {
+            mark[i] = false;
+        }
+
+        for (int i = 2; i < n; i++) {
+            if (mark[i] == true)
+                continue;
+
+            for (int j = i * i; j < n; j += i) {
+                mark[j] = true;
+            }
+        }
+
+        int count = 0;
+        for (int i = 2; i < n; i++) {
+            if (!mark[i])
+                count++;
+        }
+
+        return count;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(count(10));
     }
 }

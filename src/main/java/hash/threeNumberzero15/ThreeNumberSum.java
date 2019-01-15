@@ -1,9 +1,8 @@
 package hash.threeNumberzero15;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+
 import lombok.Data;
 
 @Data
